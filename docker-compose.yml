@@ -25,7 +25,7 @@ services:
       context: nginx
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./client/dist:/var/www/html
+      - ./client/dist:/var/www/html:ro
     ports:
       - "80:80"
     restart: always
