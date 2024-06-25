@@ -26,7 +26,7 @@ services:
     volumes:
       - ./client/dist:/usr/share/nginx/html
     ports:
-      - "80:80"
+      - "8080:80"
     restart: always
     depends_on:
       - frontend
