@@ -4,7 +4,7 @@ services:
   frontend:
     build:
       context: client
-      target: dev
+      target: prod
     ports:
       - '5173:5173'
     volumes:
@@ -19,3 +19,11 @@ services:
       - '8000:8000'
     volumes:
       - ./server:/backend
+
+  nginx:
+    image: nginx
+    volumes:
+      - ./client/dist:/usr/share/nginx/html
+    ports:
+      - "80:80"
+    restart: always
