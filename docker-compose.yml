@@ -29,3 +29,4 @@ services:
     restart: always
     depends_on:
       - frontend
+    command: chown nginx:nginx /usr/share/nginx/html/*
