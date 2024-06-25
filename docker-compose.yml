@@ -27,3 +27,5 @@ services:
     ports:
       - "80:80"
     restart: always
+    command:
+      - chmod -R /usr/share/nginx/html/
