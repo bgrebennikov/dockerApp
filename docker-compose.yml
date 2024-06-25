@@ -21,7 +21,8 @@ services:
       - ./server:/backend
 
   nginx:
-    image: nginx
+    build:
+      context: nginx
     volumes:
       - ./client/dist:/usr/share/nginx/html
     ports:
@@ -29,4 +30,3 @@ services:
     restart: always
     depends_on:
       - frontend
-    command: sh -c "chown nginx:nginx /usr/share/nginx/html/*"
