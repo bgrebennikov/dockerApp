@@ -17,6 +17,8 @@ services:
       target: deploy
     ports:
       - "80:80"
+    volumes:
+      - /client/dist:/usr/share/nginx/html
     depends_on:
       - frontend
 
